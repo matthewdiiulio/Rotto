@@ -1,3 +1,18 @@
+<style>
+  .status {
+    border-bottom:solid 1px #ccc;
+    padding:5px 0;
+}
+.status p {
+  margin:4px;
+}
+.status .admin{
+  display:none;
+}
+.status.hover .admin{
+  display:inline;
+}
+</style>
 <div class="page-header">
   <h1>Timeline</h1>
 </div>
@@ -5,10 +20,9 @@
   <div class="status"><strong><%= status.name %></strong>
     <p><%= status.content %></p>
     <div class="meta">
-      <%= link_to "Show", status %>
       <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
     <span class="admin">
-      <%= link_to "Edit", edit_status_path(status) %>
+      | <%= link_to "Edit", edit_status_path(status) %>
     </span>
     </div>
   </div>
