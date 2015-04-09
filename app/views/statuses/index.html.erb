@@ -21,11 +21,21 @@
     <div class="page-header">
       <h1>New Status</h1>
     </div>
-    <form>
-      <div class="form-group">
-        <textarea class="form-control" rows="4" placeholder="What's going on?"></textarea>
-        <%= link_to "Post a New Status", new_status_path, class: "btn btn-success" %>
+    <form accept-charset="UTF-8" action="/statuses" class="new_status" id="new_status" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="n4AhNuFOHFsJpsY3xIlB8cFocL2WXegfReVNGguGDPY=" /></div>
+          <div class="field">
+            <label for="status_name">Name</label><br>
+            <input class="form-control" id="status_name" name="status[name]" type="text" />
+        </div>
+      <div class="field">
+        <label for="status_content">What's going on?</label><br>
+        <textarea class="form-control" rows= id="status_content" name="status[content]">
+    </textarea>
+      </div>
+      <div class="actions">
+        <input class="btn, btn-success" name="commit" type="submit" value="Create Status" />
       </div>
     </form>
+    </div>
   </div>
 </div>
+
