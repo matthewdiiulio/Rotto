@@ -20,6 +20,10 @@
 }
 .status p {
   margin:4px;
+  font-size:18px;
+}
+strong {
+  font-size:22px;
 }
 .status .admin{
   display:none;
